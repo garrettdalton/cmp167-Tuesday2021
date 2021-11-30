@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-//Work on bank office and Bank class to implement the SavingAccount class that has already been created
+//Work on bank office and Bank class to implement the SavingAccount class that has already been created (creation and display with a new hash map)
 
 public class Bank {
 	//public int code;
@@ -24,6 +24,14 @@ public class Bank {
 		CheckingAccount acct = new CheckingAccount();
 		accountsWithOwner.put(owner, acct);
 		//checkingAccountList.add(acct); add to array list
+		System.out.println("Account #" + acct.number + " has been created");
+		
+		
+	}
+	
+	public void openSavingAccount(String owner) {
+		SavingAccount acct = new SavingAccount();
+		accountsWithOwner.put(owner, acct);
 		System.out.println("Account #" + acct.number + " has been created");
 		
 		

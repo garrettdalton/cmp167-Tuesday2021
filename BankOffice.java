@@ -16,6 +16,15 @@ public class BankOffice {
 			System.out.println("Do you want to open an account?");
 			answer = input.nextLine().toLowerCase();
 			if(answer.equals("y") || answer.contains("yes") || answer.contains("yeah")) {
+				while(true) {
+				System.out.println("What type of account would you like to open? Enter Saving or Checking:");
+				answer = input.nextLine().toLowerCase();
+				if(answer.contains("saving")){
+					System.out.println("Enter name of account owner:");
+					answer = input.nextLine();				
+					bank.openSavingAccount(answer);
+				}
+				else if(answer.contains("checking")) {
 				System.out.println("Enter name of account owner:");
 				answer = input.nextLine();				
 				bank.openCheckingAcct(answer);
@@ -65,5 +74,7 @@ public class BankOffice {
 		}
 		System.out.println("__________________________________________________");
 		System.out.println(bank);                                                                                                                                                  
+	}
+		}
 	}
 }
